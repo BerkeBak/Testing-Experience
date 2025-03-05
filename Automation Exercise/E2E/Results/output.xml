@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2025-01-30T15:24:44.012977" rpa="false" schemaversion="5">
+<suite id="s1" name="AutomationExercise" source="C:\Programma's\Robot framework\Automation Exercise\Tests\AutomationExercise.robot">
+<test id="s1-t1" name="Contact Us Form" line="42">
+<kw name="Begin Web Test" owner="Common" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-01-30T15:24:44.520092" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Programma's\\Robot framework\\Automation Exercise\\Results\\browser\\traces\\temp\\bd817eb0-6c42-4064-ac29-c879cf85a3de"}</msg>
+<msg time="2025-01-30T15:24:44.608899" level="INFO">Starting Browser process C:\Users\bbakker\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js using port 57370</msg>
+<msg time="2025-01-30T15:24:44.609084" level="INFO">Node startup parameters: ['node', 'C:\\Users\\bbakker\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\Browser\\wrapper\\index.js', '57370']</msg>
+<msg time="2025-01-30T15:24:46.124104" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Programma's\\Robot framework\\Automation Exercise\\Results\\browser\\traces\\temp\\bd817eb0-6c42-4064-ac29-c879cf85a3de"}</msg>
+<arg>chromium</arg>
+<arg>False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-01-30T15:24:44.519352" elapsed="1.605118"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2025-01-30T15:24:46.127328" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2025-01-30T15:24:46.156355" level="INFO">Successfully created context. </msg>
+<msg time="2025-01-30T15:24:46.156499" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-01-30T15:24:46.124935" elapsed="0.031730"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-01-30T15:24:48.448746" level="INFO">Successfully initialized new page object and opened url: https://automationexercise.com/</msg>
+<arg>${Url}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-01-30T15:24:46.157246" elapsed="2.291714"/>
+</kw>
+<kw name="Accept Cookies" owner="Common">
+<kw name="Click" owner="Browser">
+<msg time="2025-01-30T15:24:48.450373" level="INFO">Clicks the element 'xpath=/html/body/div/div[2]/div[2]/div[2]/div[2]/button[1]/p'.</msg>
+<arg>${Cookies}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-01-30T15:24:48.449793" elapsed="0.165475"/>
+</kw>
+<status status="PASS" start="2025-01-30T15:24:48.449251" elapsed="0.166184"/>
+</kw>
+<status status="PASS" start="2025-01-30T15:24:44.518072" elapsed="4.097452"/>
+</kw>
+<kw name="Contact Us Form" owner="AutomationExerciseApp">
+<kw name="Navigate To Contact Us Page" owner="TopNav">
+<kw name="Click" owner="Browser">
+<msg time="2025-01-30T15:24:48.617750" level="INFO">Clicks the element 'xpath=//*[contains(@href, 'contact')]'.</msg>
+<arg>${BUTTON_CONTACTUS}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-01-30T15:24:48.617112" elapsed="0.257708"/>
+</kw>
+<kw name="Verify Contact Us Page Loaded" owner="TopNav">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-01-30T15:24:48.952948" level="INFO">Waited for Element with selector text="Get In Touch" at state visible</msg>
+<arg>text="Get In Touch"</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-01-30T15:24:48.875893" elapsed="0.077533"/>
+</kw>
+<status status="PASS" start="2025-01-30T15:24:48.875235" elapsed="0.078379"/>
+</kw>
+<status status="PASS" start="2025-01-30T15:24:48.616675" elapsed="0.337036"/>
+</kw>
+<kw name="Send Contact Form" owner="ContactUsPage">
+<kw name="Enter Name" owner="ContactUsPage">
+<kw name="Type Text" owner="Browser">
+<msg time="2025-01-30T15:24:48.956690" level="INFO">Types the text 'Henk' in the given field.</msg>
+<arg>${CONTACT_US_INPUT_FIELD_NAME}</arg>
+<arg>Henk</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-01-30T15:24:48.955888" elapsed="0.109602"/>
+</kw>
+<status status="PASS" start="2025-01-30T15:24:48.955047" elapsed="0.110662"/>
+</kw>
+<kw name="Enter Email" owner="ContactUsPage">
+<kw name="Type Text" owner="Browser">
+<msg time="2025-01-30T15:24:49.067137" level="INFO">Types the text 'Henk@Henk.com' in the given field.</msg>
+<arg>${CONTACT_US_INPUT_FIELD_EMAIL}</arg>
+<arg>Henk@Henk.com</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-01-30T15:24:49.066531" elapsed="0.127628"/>
+</kw>
+<status status="PASS" start="2025-01-30T15:24:49.065973" elapsed="0.128376"/>
+</kw>
+<kw name="Enter Subject" owner="ContactUsPage">
+<kw name="Type Text" owner="Browser">
+<msg time="2025-01-30T15:24:49.195959" level="INFO">Types the text 'Testing' in the given field.</msg>
+<arg>${CONTACT_US_INPUT_FIELD_SUBJECT}</arg>
+<arg>Testing</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-01-30T15:24:49.195284" elapsed="0.051902"/>
+</kw>
+<status status="PASS" start="2025-01-30T15:24:49.194583" elapsed="0.052751"/>
+</kw>
+<kw name="Enter Message" owner="ContactUsPage">
+<kw name="Type Text" owner="Browser">
+<msg time="2025-01-30T15:24:49.248676" level="INFO">Types the text 'I'm inputting this text' in the given field.</msg>
+<arg>${CONTACT_US_INPUT_FIELD_MESSAGE}</arg>
+<arg>I'm inputting this text</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-01-30T15:24:49.248119" elapsed="0.110283"/>
+</kw>
+<status status="PASS" start="2025-01-30T15:24:49.247548" elapsed="0.111067"/>
+</kw>
+<kw name="Execute Manual Step" owner="Dialogs">
+<msg time="2025-01-30T15:29:45.772785" level="FAIL">No value provided by user.</msg>
+<arg>test</arg>
+<doc>Pauses execution until user sets the keyword status.</doc>
+<status status="FAIL" start="2025-01-30T15:24:49.358853" elapsed="296.414626">No value provided by user.</status>
+</kw>
+<kw name="Click Submit Button" owner="ContactUsPage">
+<status status="NOT RUN" start="2025-01-30T15:29:45.774028" elapsed="0.000636"/>
+</kw>
+<status status="FAIL" start="2025-01-30T15:24:48.954069" elapsed="296.820836">No value provided by user.</status>
+</kw>
+<kw name="Verify Homepage Loaded" owner="Homepage">
+<status status="NOT RUN" start="2025-01-30T15:29:45.775135" elapsed="0.000291"/>
+</kw>
+<status status="FAIL" start="2025-01-30T15:24:48.616152" elapsed="297.159469">No value provided by user.</status>
+</kw>
+<kw name="Close Web Test" owner="Common" type="TEARDOWN">
+<kw name="Navigate To Cart Page" owner="TopNav">
+<kw name="Click" owner="Browser">
+<msg time="2025-01-30T15:29:45.779330" level="INFO">Clicks the element 'xpath=//*[contains(@href, 'view_cart')]//parent::li'.</msg>
+<msg time="2025-01-30T15:29:45.893093" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg time="2025-01-30T15:29:45.893338" level="INFO">See also file:///C:/Programma%27s/Robot%20framework/Automation%20Exercise/Results/playwright-log.txt for additional details.</msg>
+<msg time="2025-01-30T15:29:45.893799" level="FAIL">Error: Could not find active page</msg>
+<arg>${BUTTON_CART}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="FAIL" start="2025-01-30T15:29:45.777885" elapsed="0.121737">Error: Could not find active page</status>
+</kw>
+<status status="FAIL" start="2025-01-30T15:29:45.777422" elapsed="0.122421">Error: Could not find active page</status>
+</kw>
+<kw name="Check If Shopping Cart is Empty" owner="Common">
+<kw name="Get Text" owner="Browser">
+<msg time="2025-01-30T15:29:46.982894" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg time="2025-01-30T15:29:46.982998" level="INFO">See also file:///C:/Programma%27s/Robot%20framework/Automation%20Exercise/Results/playwright-log.txt for additional details.</msg>
+<msg time="2025-01-30T15:29:46.983255" level="INFO">${Cart_Empty} = None</msg>
+<msg time="2025-01-30T15:29:46.983283" level="FAIL">Error: Could not find active page</msg>
+<var>${Cart_Empty}</var>
+<arg>xpath=//*[@id="empty_cart"]/p/b</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="FAIL" start="2025-01-30T15:29:45.900592" elapsed="1.084836">Error: Could not find active page</status>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'Cart is empty!' == '${Cart_Empty}'</arg>
+<arg>log</arg>
+<arg>Cart is Empty</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-01-30T15:29:46.985838" elapsed="0.000368"/>
+</kw>
+<status status="FAIL" start="2025-01-30T15:29:45.900090" elapsed="1.086234">Error: Could not find active page</status>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-01-30T15:29:47.183533" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-30T15:29:46.986461" elapsed="0.197221"/>
+</kw>
+<status status="FAIL" start="2025-01-30T15:29:45.776737" elapsed="1.407103">Several failures occurred:
+
+1) Error: Could not find active page
+
+2) Error: Could not find active page</status>
+</kw>
+<tag>Test Case 6</tag>
+<status status="FAIL" start="2025-01-30T15:24:44.516442" elapsed="302.667598">No value provided by user.
+
+Also teardown failed:
+Several failures occurred:
+
+1) Error: Could not find active page
+
+2) Error: Could not find active page</status>
+</test>
+<status status="FAIL" start="2025-01-30T15:24:44.015233" elapsed="303.202658"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">Test Case 6</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="AutomationExercise">AutomationExercise</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

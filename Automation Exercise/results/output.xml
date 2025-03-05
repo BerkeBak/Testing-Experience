@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2025-03-05T09:33:56.671709" rpa="false" schemaversion="5">
+<suite id="s1" name="Automation Exercise" source="C:\Programma's\Robot framework\Automation Exercise">
+<suite id="s1-s1" name="API" source="C:\Programma's\Robot framework\Automation Exercise\API">
+<suite id="s1-s1-s1" name="Testing" source="C:\Programma's\Robot framework\Automation Exercise\API\Testing">
+<suite id="s1-s1-s1-s1" name="API Testcases" source="C:\Programma's\Robot framework\Automation Exercise\API\Testing\API_Testcases.robot">
+<test id="s1-s1-s1-s1-t1" name="PUT To All Brands List" line="28">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-03-05T09:33:57.123326" level="INFO">Creating Session using : alias=BrandList, url=https://automationexercise.com/api, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>BrandList</arg>
+<arg>${BaseURL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-03-05T09:33:57.122607" elapsed="0.001472"/>
+</kw>
+<kw name="PUT On Session" owner="RequestsLibrary">
+<msg time="2025-03-05T09:33:57.859309" level="INFO">PUT Request : url=https://automationexercise.com/api/brandsList 
+ path_url=/api/brandsList 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0'} 
+ body=None 
+ </msg>
+<msg time="2025-03-05T09:33:57.859984" level="INFO">PUT Response : url=https://automationexercise.com/api/brandsList 
+ status=200, reason=OK 
+ headers={'Date': 'Wed, 05 Mar 2025 08:33:57 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'vary': 'Accept,Cookie,Accept-Encoding', 'referrer-policy': 'same-origin', 'x-frame-options': 'DENY', 'x-content-type-options': 'nosniff', 'allow': 'GET, PUT, DELETE, POST, OPTIONS', 'x-powered-by': 'Phusion Passenger(R) 6.0.23', 'status': '200 OK', 'cf-cache-status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=%2B8SAxTZVajvflMI3S0pNJY0YBeISCfR4Xpduwlcry48tMqmLpqAZJ2fOHdHSJ%2FO3IAGCqc3%2BOeoWyG47KNbI8mFA4KpsRe9DmcwG%2BXiqDlksw3DVGSwBTfC3WM3zxkA5lfRSbuqh0m9T"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '91b8457c4929664a-AMS', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=1183&amp;min_rtt=1181&amp;rtt_var=447&amp;sent=4&amp;recv=7&amp;lost=0&amp;retrans=0&amp;sent_bytes=2873&amp;recv_bytes=805&amp;delivery_rate=2419381&amp;cwnd=251&amp;unsent_bytes=0&amp;cid=1ec2a94f9984a7e1&amp;ts=653&amp;x=0"'} 
+ body={"responseCode": 405, "message": "This request method is not supported."} 
+ </msg>
+<msg time="2025-03-05T09:33:57.860364" level="INFO">C:\Users\bbakker\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py:1099: InsecureRequestWarning: Unverified HTTPS request is being made to host 'automationexercise.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2025-03-05T09:33:57.861458" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>BrandList</arg>
+<arg>/brandsList</arg>
+<arg>expected_status=200</arg>
+<doc>Sends a PUT request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-03-05T09:33:57.124432" elapsed="0.737188"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2025-03-05T09:33:57.863232" level="INFO">${body} = {"responseCode": 405, "message": "This request method is not supported."}</msg>
+<var>${body}</var>
+<arg>${response.content}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2025-03-05T09:33:57.862165" elapsed="0.001268"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${body}</arg>
+<arg>"responseCode": 405, "message": "This request method is not supported."</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-03-05T09:33:57.864028" elapsed="0.000537"/>
+</kw>
+<status status="PASS" start="2025-03-05T09:33:57.120959" elapsed="0.744003"/>
+</test>
+<status status="PASS" start="2025-03-05T09:33:56.711555" elapsed="1.155427"/>
+</suite>
+<status status="PASS" start="2025-03-05T09:33:56.709187" elapsed="1.159332"/>
+</suite>
+<status status="PASS" start="2025-03-05T09:33:56.706587" elapsed="1.163152"/>
+</suite>
+<status status="PASS" start="2025-03-05T09:33:56.683663" elapsed="1.187065"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Automation Exercise">Automation Exercise</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="API">Automation Exercise.API</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Testing">Automation Exercise.API.Testing</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="API Testcases">Automation Exercise.API.Testing.API Testcases</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

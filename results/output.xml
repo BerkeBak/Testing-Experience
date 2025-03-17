@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2025-03-10T14:55:14.291003" rpa="false" schemaversion="5">
+<suite id="s1" name="Testing-Experience" source="C:\Users\bbakker\OneDrive - Capgemini\Documents\GitHub\Testing-Experience">
+<suite id="s1-s1" name="Automation Exercise" source="C:\Users\bbakker\OneDrive - Capgemini\Documents\GitHub\Testing-Experience\Automation Exercise">
+<suite id="s1-s1-s1" name="API" source="C:\Users\bbakker\OneDrive - Capgemini\Documents\GitHub\Testing-Experience\Automation Exercise\API">
+<suite id="s1-s1-s1-s1" name="Testing" source="C:\Users\bbakker\OneDrive - Capgemini\Documents\GitHub\Testing-Experience\Automation Exercise\API\Testing">
+<suite id="s1-s1-s1-s1-s1" name="API Testcases" source="C:\Users\bbakker\OneDrive - Capgemini\Documents\GitHub\Testing-Experience\Automation Exercise\API\Testing\API_Testcases.robot">
+<test id="s1-s1-s1-s1-s1-t1" name="Delete Method To Delete User Account" line="94">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-03-10T14:55:14.754412" level="INFO">Creating Session using : alias=Delete, url=https://automationexercise.com/api, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>Delete</arg>
+<arg>${BaseURL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-03-10T14:55:14.753893" elapsed="0.000895"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-03-10T14:55:14.755585" level="INFO">&amp;{Data} = { email=Flip@Flip.com | password=FlipFlip }</msg>
+<var>&amp;{Data}</var>
+<arg>email=Flip@Flip.com</arg>
+<arg>password=FlipFlip</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-03-10T14:55:14.755093" elapsed="0.000901"/>
+</kw>
+<kw name="DELETE On Session" owner="RequestsLibrary">
+<msg time="2025-03-10T14:55:15.710241" level="INFO">DELETE Request : url=https://automationexercise.com/api/deleteAccount 
+ path_url=/api/deleteAccount 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '39', 'Content-Type': 'application/x-www-form-urlencoded'} 
+ body=email=Flip%40Flip.com&amp;password=FlipFlip 
+ </msg>
+<msg time="2025-03-10T14:55:15.710839" level="INFO">DELETE Response : url=https://automationexercise.com/api/deleteAccount 
+ status=200, reason=OK 
+ headers={'Date': 'Mon, 10 Mar 2025 13:55:15 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'vary': 'Accept,Cookie,Accept-Encoding', 'referrer-policy': 'same-origin', 'x-frame-options': 'DENY', 'x-content-type-options': 'nosniff', 'allow': 'OPTIONS, DELETE', 'x-powered-by': 'Phusion Passenger(R) 6.0.23', 'status': '200 OK', 'cf-cache-status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=azOX5IEHg0fddTVMRYO%2BonO3ibokUBMISWc8YZc14%2B5sTQ2NXHTw%2BnUy6rBDs7I7m3gD3WiMJYlGrC0lT7cD6FADbDOpYHDOhetQWG5v0yJ9esC4%2BOBUcLDaggN6GzFPunPLEuG8GK%2BO"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '91e34f01ea58a015-AMS', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=1619&amp;min_rtt=1424&amp;rtt_var=673&amp;sent=4&amp;recv=7&amp;lost=0&amp;retrans=0&amp;sent_bytes=2872&amp;recv_bytes=922&amp;delivery_rate=2033707&amp;cwnd=251&amp;unsent_bytes=0&amp;cid=01f5748ad86eeca7&amp;ts=758&amp;x=0"'} 
+ body={"responseCode": 200, "message": "Account deleted!"} 
+ </msg>
+<msg time="2025-03-10T14:55:15.711256" level="INFO">C:\Users\bbakker\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py:1099: InsecureRequestWarning: Unverified HTTPS request is being made to host 'automationexercise.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2025-03-10T14:55:15.712294" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>Delete</arg>
+<arg>/deleteAccount</arg>
+<arg>data=&amp;{Data}</arg>
+<arg>expected_status=200</arg>
+<doc>Sends a DELETE request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-03-10T14:55:14.756451" elapsed="0.956094"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${response.content}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-10T14:55:15.713113" elapsed="0.001631"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2025-03-10T14:55:15.715945" level="INFO">${statuscode} = 200</msg>
+<var>${statuscode}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2025-03-10T14:55:15.715116" elapsed="0.001069"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${statuscode}</arg>
+<arg>200</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-03-10T14:55:15.716518" elapsed="0.000503"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2025-03-10T14:55:15.718070" level="INFO">${body} = {"responseCode": 200, "message": "Account deleted!"}</msg>
+<var>${body}</var>
+<arg>${response.content}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2025-03-10T14:55:15.717401" elapsed="0.000815"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${BODY}</arg>
+<arg>"responseCode": 200</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-03-10T14:55:15.718516" elapsed="0.000391"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${BODY}</arg>
+<arg>"message": "Account deleted!"</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-03-10T14:55:15.719203" elapsed="0.000333"/>
+</kw>
+<status status="PASS" start="2025-03-10T14:55:14.752648" elapsed="0.967225"/>
+</test>
+<status status="PASS" start="2025-03-10T14:55:14.330153" elapsed="1.390865"/>
+</suite>
+<status status="PASS" start="2025-03-10T14:55:14.328428" elapsed="1.393773"/>
+</suite>
+<status status="PASS" start="2025-03-10T14:55:14.325619" elapsed="1.398241"/>
+</suite>
+<status status="PASS" start="2025-03-10T14:55:14.322076" elapsed="1.402715"/>
+</suite>
+<status status="PASS" start="2025-03-10T14:55:14.300886" elapsed="1.424673"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Testing-Experience">Testing-Experience</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Automation Exercise">Testing-Experience.Automation Exercise</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="API">Testing-Experience.Automation Exercise.API</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="Testing">Testing-Experience.Automation Exercise.API.Testing</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1-s1" name="API Testcases">Testing-Experience.Automation Exercise.API.Testing.API Testcases</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

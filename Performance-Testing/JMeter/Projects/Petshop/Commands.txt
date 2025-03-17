@@ -1,0 +1,8 @@
+
+#Runs the program and logs it in the ResultsTest.csv file
+jmeter -n -t C:\Programma's\JMeter\Projects\Petshop\PetshopRefactured.jmx -l C:\Programma's\JMeter\Projects\Petshop\ResultsTest
+
+#In the verkenner change ResultsTest into ResultsTest.csv (add .csv to the file name)
+
+#Converts the ResultsTest.csv file to a Dashboard
+jmeter -g C:\Programma's\JMeter\Projects\Petshop\ResultsTest.csv -o C:\Programma's\JMeter\Projects\Petshop\Dashboard

@@ -1,0 +1,10 @@
+Homepage,/
+ShoppingCart,/index.php?route=checkout/cart
+OverviewAllCats,/index.php?route=product/category&path=62
+ShortHairedCats,/index.php?route=product/category&path=62_59
+MediumHairedCats,/index.php?route=product/category&path=62_60
+LongHairedCats,/index.php?route=product/category&path=62_61
+NorwegianForestCat,/index.php?route=product/product&path=62_60&product_id=71
+Ragdoll,/index.php?route=product/product&path=62_60&product_id=77
+MyAccount,/index.php?route=account/login
+Siberian,/index.php?route=product/product&path=62_61&product_id=89

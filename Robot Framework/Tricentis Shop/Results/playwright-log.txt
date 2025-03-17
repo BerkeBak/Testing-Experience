@@ -1,0 +1,42 @@
+{"level":30,"time":"2025-02-06T08:43:49.103Z","pid":12624,"hostname":"NLLEQ0413004175","msg":"Listening on 55021"}
+(node:12624) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2025-02-06T08:43:49.453Z","pid":12624,"hostname":"NLLEQ0413004175","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-02-06T08:43:49.885Z","pid":12624,"hostname":"NLLEQ0413004175","msg":"Adding browser to stack: chromium, version: 131.0.6778.33"}
+{"level":30,"time":"2025-02-06T08:43:49.886Z","pid":12624,"hostname":"NLLEQ0413004175","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-02-06T08:43:49.886Z","pid":12624,"hostname":"NLLEQ0413004175","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-02-06T08:43:49.891Z","pid":12624,"hostname":"NLLEQ0413004175","msg":"Start of node method newContext"}
+{"level":30,"time":"2025-02-06T08:43:49.891Z","pid":12624,"hostname":"NLLEQ0413004175","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":true,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}}"}
+{"level":30,"time":"2025-02-06T08:43:49.891Z","pid":12624,"hostname":"NLLEQ0413004175","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-02-06T08:43:49.891Z","pid":12624,"hostname":"NLLEQ0413004175","msg":"Trace file: "}
+{"level":30,"time":"2025-02-06T08:43:49.904Z","pid":12624,"hostname":"NLLEQ0413004175","msg":"Changed active context"}
+{"level":30,"time":"2025-02-06T08:43:49.905Z","pid":12624,"hostname":"NLLEQ0413004175","msg":"End of node method newContext"}
+{"level":30,"time":"2025-02-06T08:43:49.910Z","pid":12624,"hostname":"NLLEQ0413004175","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-02-06T08:43:49.910Z","pid":12624,"hostname":"NLLEQ0413004175","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-02-06T08:43:50.310Z","pid":12624,"hostname":"NLLEQ0413004175","msg":"Video path: undefined"}
+{"level":30,"time":"2025-02-06T08:43:50.310Z","pid":12624,"hostname":"NLLEQ0413004175","msg":"Changed active page"}
+{"level":30,"time":"2025-02-06T08:43:50.318Z","pid":12624,"hostname":"NLLEQ0413004175","msg":"End of node method newPage"}
+{"level":30,"time":"2025-02-06T08:43:50.323Z","pid":12624,"hostname":"NLLEQ0413004175","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-02-06T08:43:50.327Z","pid":12624,"hostname":"NLLEQ0413004175","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-02-06T08:43:50.333Z","pid":12624,"hostname":"NLLEQ0413004175","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-02-06T08:43:50.336Z","pid":12624,"hostname":"NLLEQ0413004175","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-02-06T08:43:50.340Z","pid":12624,"hostname":"NLLEQ0413004175","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2025-02-06T08:43:50.353Z","pid":12624,"hostname":"NLLEQ0413004175","msg":"Removed page=2b9f759d-1421-4e87-b097-348d0df4d8db from context=7472d7e0-b744-4795-a518-4e7f28065076 page stack"}
+{"level":30,"time":"2025-02-06T08:43:50.505Z","pid":12624,"hostname":"NLLEQ0413004175","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\bbakker\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:12202:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\bbakker\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:13094:59)
+    at PlaywrightServer.setTimeout (C:\Users\bbakker\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:13342:57)
+    at Object.onReceiveHalfClose (C:\Users\bbakker\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1425:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\bbakker\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:569:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\bbakker\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:609:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\bbakker\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:376:18)
+    at ServerHttp2Stream.emit (node:events:532:35)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2025-02-06T08:43:50.531Z","pid":12624,"hostname":"NLLEQ0413004175","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-02-06T08:43:50.531Z","pid":12624,"hostname":"NLLEQ0413004175","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-02-06T08:43:50.574Z","pid":12624,"hostname":"NLLEQ0413004175","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2025-02-06T08:43:50.575Z","pid":12624,"hostname":"NLLEQ0413004175","msg":"End of node method closeAllBrowsers"}

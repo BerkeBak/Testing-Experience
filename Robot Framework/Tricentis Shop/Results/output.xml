@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2025-02-06T09:43:47.344185" rpa="false" schemaversion="5">
+<suite id="s1" name="Tricentis Shop" source="C:\Programma's\Robot framework\Tricentis Shop">
+<suite id="s1-s1" name="Tests" source="C:\Programma's\Robot framework\Tricentis Shop\Tests">
+<suite id="s1-s1-s1" name="MotorcycleTests" source="C:\Programma's\Robot framework\Tricentis Shop\Tests\MotorcycleTests.robot">
+<kw name="Open Browser" owner="Browser" type="SETUP">
+<msg time="2025-02-06T09:43:48.177178" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-02-06T09:43:48.178617" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Programma's\\Robot framework\\Tricentis Shop\\results\\browser\\traces\\temp\\7764df10-00e1-408c-acd5-751899d922e5"}</msg>
+<msg time="2025-02-06T09:43:48.313020" level="INFO">Starting Browser process C:\Users\bbakker\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js using port 55021</msg>
+<msg time="2025-02-06T09:43:48.313632" level="INFO">Node startup parameters: ['node', 'C:\\Users\\bbakker\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\Browser\\wrapper\\index.js', '55021']</msg>
+<msg time="2025-02-06T09:43:49.886830" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Programma's\\Robot framework\\Tricentis Shop\\results\\browser\\traces\\temp\\7764df10-00e1-408c-acd5-751899d922e5"}</msg>
+<msg time="2025-02-06T09:43:49.887883" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2025-02-06T09:43:49.906600" level="INFO">Successfully created context. </msg>
+<msg time="2025-02-06T09:43:49.906983" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<msg time="2025-02-06T09:43:50.318789" level="INFO">Successfully initialized new page object and opened url: about:blank</msg>
+<arg>browser=chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<status status="PASS" start="2025-02-06T09:43:48.175432" elapsed="2.143861"/>
+</kw>
+<test id="s1-s1-s1-t1" name="Motorcycle Insurance" line="16">
+<status status="FAIL" start="2025-02-06T09:43:50.319636" elapsed="0.008423">Test cannot be empty.</status>
+</test>
+<kw name="Close Browser" owner="Browser" type="TEARDOWN">
+<msg time="2025-02-06T09:43:50.505372" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-06T09:43:50.337467" elapsed="0.168339"/>
+</kw>
+<status status="FAIL" start="2025-02-06T09:43:47.370451" elapsed="3.135541"/>
+</suite>
+<status status="FAIL" start="2025-02-06T09:43:47.368136" elapsed="3.165779"/>
+</suite>
+<status status="FAIL" start="2025-02-06T09:43:47.348317" elapsed="3.186996"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Tricentis Shop">Tricentis Shop</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Tests">Tricentis Shop.Tests</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="MotorcycleTests">Tricentis Shop.Tests.MotorcycleTests</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-02-06T09:43:48.155921" level="ERROR">[ DataDriver ] Error in robot file:
+  File "C:\Programma's\Robot framework\Tricentis Shop\Tests\MotorcycleTests.robot", line 0</msg>
+<msg time="2025-02-06T09:43:48.156426" level="ERROR">In source file:
+  File "C:\Programma's\Robot framework\Tricentis Shop\Tests\Testdata\TestData.xlsx", line 0</msg>
+<msg time="2025-02-06T09:43:48.173218" level="ERROR">Calling method '_start_suite' of listener 'DataDriver' failed: ValueError: Worksheet named 'Motorcycle' not found</msg>
+<msg time="2025-02-06T09:43:48.177178" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+</errors>
+</robot>

@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-09-03T16:04:29.899611" rpa="false" schemaversion="5">
+<suite id="s1" name="ABN Tool" source="C:\Programma's\Robot framework\ABN Hypotheek tool\Tests\ABN_Tool.robot">
+<test id="s1-t1" name="Calculate" line="18">
+<kw name="Begin Web Test" owner="Common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-03T16:04:30.173129" level="INFO">Opening browser 'edge' to base url 'https://www.abnamro.nl/nl/prive/hypotheken/maximale-hypotheek-berekenen.html'.</msg>
+<arg>${Url}</arg>
+<arg>${Browser}</arg>
+<arg>options=add_argument("disable-search-engine-choice-screen");</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-03T16:04:30.173129" elapsed="5.312955"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-03T16:04:35.486084" elapsed="0.056505"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${ACCEPT_COOKIES_BUTTON}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-03T16:04:35.543595" elapsed="0.016024"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-03T16:04:35.560127" level="INFO">Clicking element '//*[@id="aab-cookie-consent-agree"]'.</msg>
+<arg>${ACCEPT_COOKIES_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T16:04:35.560127" elapsed="0.123450"/>
+</kw>
+<status status="PASS" start="2024-09-03T16:04:30.172117" elapsed="5.511460"/>
+</kw>
+<kw name="Start Calculation Samen" owner="ABN_Tool_APP">
+<kw name="Is de pagina geladen?" owner="FrontpageHypotheek">
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2024-09-03T16:04:35.685591" level="INFO">Selecting frame '//iframe[@id='215993']'.</msg>
+<arg>${iframe}</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2024-09-03T16:04:35.685591" elapsed="0.084288"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Bereken uw hypotheek</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-03T16:04:35.769879" elapsed="0.012259"/>
+</kw>
+<status status="PASS" start="2024-09-03T16:04:35.685591" elapsed="0.096547"/>
+</kw>
+<kw name="Start hypotheek berekening" owner="FrontpageHypotheek">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-09-03T16:04:35.783153" level="INFO">Clicking button '//button[contains(text(),"Reken verder")]'.</msg>
+<arg>//button[contains(text(),"Reken verder")]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T16:04:35.783153" elapsed="0.414990"/>
+</kw>
+<kw name="Unselect Frame" owner="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" start="2024-09-03T16:04:36.198143" elapsed="1.608288"/>
+</kw>
+<status status="PASS" start="2024-09-03T16:04:35.782138" elapsed="2.024293"/>
+</kw>
+<kw name="Start hier uw hypotheek berekening" owner="HypotheekCalculation">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>maximale hypotheek berekenen verder</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-03T16:04:37.807428" elapsed="0.018586"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2024-09-03T16:04:37.827013" level="INFO">Selecting frame '//iframe[@id='212927']'.</msg>
+<arg>//iframe[@id='212927']</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2024-09-03T16:04:37.827013" elapsed="0.033842"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Start hier uw hypotheek berekening</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-03T16:04:37.860855" elapsed="0.012874"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-09-03T16:04:37.874731" level="INFO">Clicking button '//button[@data-element-label="Ik heb nog geen hypotheek bij ABN AMRO"]'.</msg>
+<arg>//button[@data-element-label="Ik heb nog geen hypotheek bij ABN AMRO"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T16:04:37.873729" elapsed="0.239232"/>
+</kw>
+<status status="PASS" start="2024-09-03T16:04:37.807428" elapsed="0.305533"/>
+</kw>
+<kw name="Koopt u alleen of samen?" owner="HypotheekCalculation">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Koopt u alleen of samen?</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-03T16:04:38.112961" elapsed="0.023966"/>
+</kw>
+<status status="PASS" start="2024-09-03T16:04:38.112961" elapsed="0.023966"/>
+</kw>
+<kw name="Kies Samen" owner="Keuzes">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-03T16:04:38.137925" level="INFO">Clicking element '//*[contains(text(),"Samen")]'.</msg>
+<arg>//*[contains(text(),"Samen")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T16:04:38.137925" elapsed="0.199309"/>
+</kw>
+<status status="PASS" start="2024-09-03T16:04:38.136927" elapsed="0.200307"/>
+</kw>
+<kw name="Wat is uw leeftijd?" owner="HypotheekCalculation">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//input[@id='age']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-03T16:04:38.338234" elapsed="0.025000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T16:04:38.363234" level="INFO">Typing text '35' into text field '//input[@id='age']'.</msg>
+<arg>//input[@id='age']</arg>
+<arg>${Uw_Leeftijd}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T16:04:38.363234" elapsed="0.121891"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>//button[@class="base-btn__inner-button"]</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-09-03T16:04:38.485125" elapsed="0.677936"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-09-03T16:04:39.163061" level="INFO">Clicking button '//button[@class="base-btn__inner-button"]'.</msg>
+<arg>//button[@class="base-btn__inner-button"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T16:04:39.163061" elapsed="0.180240"/>
+</kw>
+<status status="PASS" start="2024-09-03T16:04:38.338234" elapsed="1.005067"/>
+</kw>
+<kw name="Wat is de leeftijd van uw partner?" owner="HypotheekCalculation">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//input[@id='agePartner']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-03T16:04:39.344317" elapsed="0.021252"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T16:04:39.365569" level="INFO">Typing text '30' into text field '//input[@id='agePartner']'.</msg>
+<arg>//input[@id='agePartner']</arg>
+<arg>${Partner_Leeftijd}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T16:04:39.365569" elapsed="0.102227"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>//button[@class="base-btn__inner-button"]</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-09-03T16:04:39.467796" elapsed="0.677770"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-09-03T16:04:40.146563" level="INFO">Clicking button '//button[@class="base-btn__inner-button"]'.</msg>
+<arg>//button[@class="base-btn__inner-button"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T16:04:40.146563" elapsed="0.199137"/>
+</kw>
+<status status="PASS" start="2024-09-03T16:04:39.343301" elapsed="1.002399"/>
+</kw>
+<kw name="Wat is uw werksituatie?" owner="HypotheekCalculation">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Wat is uw werksituatie?</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-03T16:04:40.347032" elapsed="0.014397"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-09-03T16:04:40.362428" level="INFO">Clicking button '//button[@class="base-btn__inner-button"]'.</msg>
+<arg>//button[@class="base-btn__inner-button"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T16:04:40.362428" elapsed="0.200241"/>
+</kw>
+<status status="PASS" start="2024-09-03T16:04:40.347032" elapsed="0.215637"/>
+</kw>
+<kw name="Wat is uw bruto inkomen per jaar?" owner="HypotheekCalculation">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-03T16:04:41.564001" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-03T16:04:40.562669" elapsed="1.001332"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>dom:document.querySelector("#currency-input-income").shadowRoot.querySelector("#inputId")</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-03T16:04:41.564001" elapsed="0.022828"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T16:04:41.587830" level="INFO">Typing text '50000' into text field 'dom:document.querySelector("#currency-input-income").shadowRoot.querySelector("#inputId")'.</msg>
+<arg>dom:document.querySelector("#currency-input-income").shadowRoot.querySelector("#inputId")</arg>
+<arg>${Uw_Bruto_Inkomen_Per_Jaar}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T16:04:41.586829" elapsed="0.140286"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>dom:document.querySelector("#app &gt; div.orientation &gt; div &gt; div &gt; div &gt; div.wizard-components-resolver-components &gt; div &gt; div.currency-input.wizard-components-resolver-components__user-input &gt; div.base-button-wrapper &gt; aab-button &gt; button")</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-09-03T16:04:41.728113" elapsed="0.672773"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-09-03T16:04:42.400886" level="INFO">Clicking button '//button[@class="base-btn__inner-button"]'.</msg>
+<arg>//button[@class="base-btn__inner-button"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T16:04:42.400886" elapsed="0.169860"/>
+</kw>
+<status status="PASS" start="2024-09-03T16:04:40.562669" elapsed="2.009084"/>
+</kw>
+<kw name="Wat is de werksituatie van uw partner?" owner="HypotheekCalculation">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Wat is de werksituatie van uw partner?</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-03T16:04:42.571753" elapsed="0.012100"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-09-03T16:04:42.584861" level="INFO">Clicking button '//button[@class="base-btn__inner-button"]'.</msg>
+<arg>//button[@class="base-btn__inner-button"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T16:04:42.584861" elapsed="0.144493"/>
+</kw>
+<status status="PASS" start="2024-09-03T16:04:42.571753" elapsed="0.157601"/>
+</kw>
+<kw name="Wat is het bruto inkomen per jaar van uw partner?" owner="HypotheekCalculation">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-03T16:04:43.731437" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-03T16:04:42.730802" elapsed="1.000635"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>dom:document.querySelector("#currency-input-incomePartner").shadowRoot.querySelector("#inputId")</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-03T16:04:43.731437" elapsed="0.012440"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T16:04:43.745199" level="INFO">Typing text '60000' into text field 'dom:document.querySelector("#currency-input-incomePartner").shadowRoot.querySelector("#inputId")'.</msg>
+<arg>dom:document.querySelector("#currency-input-incomePartner").shadowRoot.querySelector("#inputId")</arg>
+<arg>${Partner_Bruto_Inkomen_Per_Jaar}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T16:04:43.743877" elapsed="0.096007"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>dom:document.querySelector("#app &gt; div.orientation &gt; div &gt; div &gt; div &gt; div.wizard-components-resolver-components &gt; div &gt; div.currency-input.wizard-components-resolver-components__user-input &gt; div.base-button-wrapper &gt; aab-button &gt; button")</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-09-03T16:04:43.839884" elapsed="0.664468"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-09-03T16:04:44.505671" level="INFO">Clicking button '//button[@class="base-btn__inner-button"]'.</msg>
+<arg>//button[@class="base-btn__inner-button"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T16:04:44.504352" elapsed="0.162061"/>
+</kw>
+<status status="PASS" start="2024-09-03T16:04:42.729354" elapsed="1.937059"/>
+</kw>
+<kw name="Heeft u of uw partner een studieschuld?" owner="HypotheekCalculation">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Heeft u of uw partner een studieschuld?</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-03T16:04:44.666918" elapsed="0.014818"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-03T16:04:44.681736" level="INFO">Clicking element '//*[contains(text(),"Nee")]'.</msg>
+<arg>//*[contains(text(),"Nee")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T16:04:44.681736" elapsed="0.140662"/>
+</kw>
+<status status="PASS" start="2024-09-03T16:04:44.666413" elapsed="0.155985"/>
+</kw>
+<kw name="Hebben jullie leningen?" owner="HypotheekCalculation">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Hebben jullie leningen?</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-03T16:04:44.823404" elapsed="0.014971"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-03T16:04:44.839396" level="INFO">Clicking element '//*[contains(text(),"Nee")]'.</msg>
+<arg>//*[contains(text(),"Nee")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T16:04:44.838375" elapsed="0.129698"/>
+</kw>
+<status status="PASS" start="2024-09-03T16:04:44.823404" elapsed="0.144669"/>
+</kw>
+<kw name="Betaalt één van jullie alimentatie?" owner="HypotheekCalculation">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Betaalt één van jullie alimentatie?</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-03T16:04:44.968582" elapsed="0.014995"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-03T16:04:44.983577" level="INFO">Clicking element '//*[contains(text(),"Nee")]'.</msg>
+<arg>//*[contains(text(),"Nee")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T16:04:44.983577" elapsed="0.141172"/>
+</kw>
+<status status="PASS" start="2024-09-03T16:04:44.968073" elapsed="0.156676"/>
+</kw>
+<kw name="Heeft u al een koopwoning?" owner="HypotheekCalculation">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>heeft u al een koopwoning?</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-03T16:04:45.125764" elapsed="0.017011"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-03T16:04:45.144289" level="INFO">Clicking element '//*[contains(text(),"Nee")]'.</msg>
+<arg>//*[contains(text(),"Nee")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T16:04:45.142775" elapsed="0.146545"/>
+</kw>
+<status status="PASS" start="2024-09-03T16:04:45.125764" elapsed="0.163556"/>
+</kw>
+<kw name="Hoeveel geld wilt u zelf inbrengen?" owner="HypotheekCalculation">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Hoeveel geld wilt u zelf inbrengen?</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-03T16:04:45.289320" elapsed="0.017529"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>dom:document.querySelector("#currency-input-ownFunds").shadowRoot.querySelector("#inputId")</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-03T16:04:45.307899" elapsed="0.013736"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-03T16:04:45.321635" level="INFO">Typing text '20000' into text field 'dom:document.querySelector("#currency-input-ownFunds").shadowRoot.querySelector("#inputId")'.</msg>
+<arg>dom:document.querySelector("#currency-input-ownFunds").shadowRoot.querySelector("#inputId")</arg>
+<arg>${Uw_Eigen_Inleg}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T16:04:45.321635" elapsed="0.101235"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>//*[@id="app"]/div[3]/div/div/div/div[3]/div/div[1]/div[3]/aab-button/button</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-09-03T16:04:45.422870" elapsed="0.709693"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-09-03T16:04:46.132563" level="INFO">Clicking button '//*[@id="app"]/div[3]/div/div/div/div[3]/div/div[1]/div[3]/aab-button/button'.</msg>
+<arg>//*[@id="app"]/div[3]/div/div/div/div[3]/div/div[1]/div[3]/aab-button/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-03T16:04:46.132563" elapsed="0.238832"/>
+</kw>
+<status status="PASS" start="2024-09-03T16:04:45.289320" elapsed="1.083078"/>
+</kw>
+<kw name="Uiteindelijke berekening Samen" owner="HypotheekCalculation">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Woonbudget</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-03T16:04:46.373393" elapsed="1.224247"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${Samen_Uiteindelijke_Hypotheek}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-03T16:04:47.598659" elapsed="0.015629"/>
+</kw>
+<status status="PASS" start="2024-09-03T16:04:46.372398" elapsed="1.241890"/>
+</kw>
+<status status="PASS" start="2024-09-03T16:04:35.684587" elapsed="11.929701"/>
+</kw>
+<kw name="Close Web Test" owner="Common" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-09-03T16:04:47.615843" elapsed="2.493952"/>
+</kw>
+<status status="PASS" start="2024-09-03T16:04:47.615305" elapsed="2.495483"/>
+</kw>
+<status status="PASS" start="2024-09-03T16:04:30.170803" elapsed="19.939985"/>
+</test>
+<status status="PASS" start="2024-09-03T16:04:29.902587" elapsed="20.210199"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="ABN Tool">ABN Tool</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

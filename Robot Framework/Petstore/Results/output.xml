@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-08-26T15:21:57.057140" rpa="false" schemaversion="5">
+<suite id="s1" name="Petstore" source="C:\Programma's\Robot framework\Petstore\tests\Petstore.robot">
+<test id="s1-t1" name="Home page should load" line="23">
+<kw name="Begin Web Test" owner="CommonWeb" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-08-26T15:21:57.284209" level="INFO">Opening browser 'chrome' to base url 'http://testobjectv1.westeurope.cloudapp.azure.com/index.php?route=common/home'.</msg>
+<arg>http://testobjectv1.westeurope.cloudapp.azure.com/index.php?route=common/home</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-08-26T15:21:57.282500" elapsed="9.756409"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-08-26T15:22:07.040143" elapsed="0.387891"/>
+</kw>
+<status status="PASS" start="2024-08-26T15:21:57.282500" elapsed="10.145534"/>
+</kw>
+<kw name="Go to Home Page" owner="PetstoreApp">
+<kw name="Navigate to" owner="Homepage">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-08-26T15:22:07.432016" level="INFO">Opening url 'http://testobjectv1.westeurope.cloudapp.azure.com/index.php?route=common/home'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-08-26T15:22:07.432016" elapsed="0.089927"/>
+</kw>
+<status status="PASS" start="2024-08-26T15:22:07.429549" elapsed="0.092394"/>
+</kw>
+<kw name="Verify Page Loaded" owner="Homepage">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${HOMEPAGE_LOGO_ELEMENT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-08-26T15:22:07.521943" elapsed="0.012648"/>
+</kw>
+<status status="PASS" start="2024-08-26T15:22:07.521943" elapsed="0.013656"/>
+</kw>
+<status status="PASS" start="2024-08-26T15:22:07.428034" elapsed="0.107565"/>
+</kw>
+<kw name="End Web Test" owner="CommonWeb" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-08-26T15:22:07.536601" elapsed="6.514258"/>
+</kw>
+<status status="PASS" start="2024-08-26T15:22:07.536601" elapsed="6.514258"/>
+</kw>
+<tag>1001</tag>
+<tag>Home</tag>
+<tag>Smoke</tag>
+<status status="PASS" start="2024-08-26T15:21:57.282500" elapsed="16.768359"/>
+</test>
+<doc>These are the testscripts for the Petstore</doc>
+<status status="PASS" start="2024-08-26T15:21:57.059144" elapsed="16.992719"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">1001</stat>
+<stat pass="1" fail="0" skip="0">Home</stat>
+<stat pass="1" fail="0" skip="0">Smoke</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Petstore">Petstore</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
